@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,6 +14,33 @@
     <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="myCSS.css" />
 </head>
+<style>
+
+.progressBar {
+  position: relative;
+  width: 95%;
+  height: 50px;
+  margin: 20px auto;
+  border: 3px solid #fab617;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progressBar div {
+  position: relative;
+  height: 100%;
+  background-color: #fab617;
+}
+
+.progressBar .progressText {
+  position: absolute;
+  margin: 0 auto;
+  top: 12px;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
@@ -92,7 +120,7 @@
                     <td class="align-middle" data-bind="text:Name"></td>
                     <td class="align-middle" data-bind="text:IOC"></td>
                     <td class="align-middle" data-bind="text:Flag"></td>
-    
+                    
                   <!-- <td data-bind="foreach: Events"><span data-bind="text: Name"></span>   </td> 
                     <td class="align-middle" data-bind="text:Events.Id"></td>
                     <td class="align-middle" data-bind="text:Events.Name"></td>
@@ -113,8 +141,7 @@
 
 
 
-        
-    <!-- Modal -->
+     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -129,6 +156,7 @@
             </div>
         </div>
     </div>
+
     <!-- End of Working Area -->
     <nav class="navbar navbar-light bg-light fixed-bottom">
         <div class="container small">
