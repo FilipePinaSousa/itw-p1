@@ -4,6 +4,10 @@ $("document").ready(function () {
     $(window).resize(function () {
     $("#mapid").css("height", window.innerHeight - 84);
     });
+    let mapOptions = {
+        center:[51.958, 9.141],
+        zoom:10
+    }
     var mymap = L.map('mapid').setView([36.75, -17], 6);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=(token)', {
     maxZoom: 18,
@@ -16,6 +20,9 @@ $("document").ready(function () {
     //#region 
     L.marker([39.458190000, -31.130100000], { opacity: 0.80 })
     .bindTooltip('Flores (Aer&#xF3;dromo)').openTooltip()
+    //#region 
+    L.marker([48.8534100, 2.3488000], { opacity: 0.80 })
+    .bindTooltip('Paris 2022 (Aer&#xF3;dromo)').openTooltip()
     .addTo(mymap);
     //.... lista de todas as estações
     L.marker([38.723900000, -9.164900000], { opacity: 0.80 })
